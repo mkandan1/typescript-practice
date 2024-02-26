@@ -62,3 +62,39 @@ const car: { type: string, model: string, year: number } = {
 // When unknown key type
 const nameAgeMap: { [index: string]: number } = {}
 nameAgeMap.Mani = 20
+
+// ====================
+// Enum
+// ====================
+
+// Number enum
+enum currentDirection1 {
+    North,
+    South,
+    East,
+    West
+}
+
+// Auto Increaments
+enum currentDirection2 {
+    North = 1,
+    South,
+    East,
+    West
+}
+
+// Fully initialized
+enum currentDirection3 {
+    North = 200,
+    South = 405,
+    East = 304,
+    West = 123
+}
+
+// String enum
+enum currentDirection4 {
+    North = "North",
+    South = "South",
+    East = "East",
+    West = "West"
+}
