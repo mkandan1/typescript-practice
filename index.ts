@@ -98,3 +98,65 @@ enum currentDirection4 {
     East = "East",
     West = "West"
 }
+
+// ====================
+// Type Aliases
+// ====================
+
+// Aliases
+type CarName = string;
+type CarType = string;
+type CarYear = number;
+type Car = {
+    name: CarName,
+    type: CarType,
+    year: CarYear
+}
+
+const carName : CarName = "Toyota";
+const carType : CarType = "Corno";
+const carYear : CarYear = 2003;
+const carObject : Car = {
+    name: carName,
+    type: carType,
+    year: carYear
+}
+
+// ====================
+// Interfaces
+// ====================
+
+// Interface only applied to Objects
+
+interface Rectangle {
+    width: number,
+    height: number
+}
+
+const rectangle : Rectangle = {
+    width: 120,
+    height: 60
+}
+
+
+interface ColoredRectangle extends Rectangle {
+    color: string
+}
+
+const coloredRectangle : ColoredRectangle = {
+    width: 120,
+    height: 60,
+    color: 'white'
+}
+
+// ====================
+// Union
+// ====================
+
+// When we don't know the data type whether string or number, we use union ` \ `
+const showError = (errorCode: string | number) => {
+    console.log(`Error Code: ${errorCode}`);
+}
+
+showError('404');
+showError(404);

@@ -49,3 +49,64 @@ var car = {
 // When unknown key type
 var nameAgeMap = {};
 nameAgeMap.Mani = 20;
+// ====================
+// Enum
+// ====================
+// Number enum
+var currentDirection1;
+(function (currentDirection1) {
+    currentDirection1[currentDirection1["North"] = 0] = "North";
+    currentDirection1[currentDirection1["South"] = 1] = "South";
+    currentDirection1[currentDirection1["East"] = 2] = "East";
+    currentDirection1[currentDirection1["West"] = 3] = "West";
+})(currentDirection1 || (currentDirection1 = {}));
+// Auto Increaments
+var currentDirection2;
+(function (currentDirection2) {
+    currentDirection2[currentDirection2["North"] = 1] = "North";
+    currentDirection2[currentDirection2["South"] = 2] = "South";
+    currentDirection2[currentDirection2["East"] = 3] = "East";
+    currentDirection2[currentDirection2["West"] = 4] = "West";
+})(currentDirection2 || (currentDirection2 = {}));
+// Fully initialized
+var currentDirection3;
+(function (currentDirection3) {
+    currentDirection3[currentDirection3["North"] = 200] = "North";
+    currentDirection3[currentDirection3["South"] = 405] = "South";
+    currentDirection3[currentDirection3["East"] = 304] = "East";
+    currentDirection3[currentDirection3["West"] = 123] = "West";
+})(currentDirection3 || (currentDirection3 = {}));
+// String enum
+var currentDirection4;
+(function (currentDirection4) {
+    currentDirection4["North"] = "North";
+    currentDirection4["South"] = "South";
+    currentDirection4["East"] = "East";
+    currentDirection4["West"] = "West";
+})(currentDirection4 || (currentDirection4 = {}));
+var carName = "Toyota";
+var carType = "Corno";
+var carYear = 2003;
+var carObject = {
+    name: carName,
+    type: carType,
+    year: carYear
+};
+var rectangle = {
+    width: 120,
+    height: 60
+};
+var coloredRectangle = {
+    width: 120,
+    height: 60,
+    color: 'white'
+};
+// ====================
+// Union
+// ====================
+// When we don't know the data type whether string or number, we use union ` \ `
+var showError = function (errorCode) {
+    console.log("Error Code: ".concat(errorCode));
+};
+showError('404');
+showError(404);
