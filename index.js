@@ -110,3 +110,11 @@ var showError = function (errorCode) {
 };
 showError('404');
 showError(404);
+// ====================
+// TypeScript Functions
+// ====================
+// return type explicitly defined
+function getSum(_a) {
+    var x = _a.x, y = _a.y;
+    return x + y;
+}

@@ -113,10 +113,10 @@ type Car = {
     year: CarYear
 }
 
-const carName : CarName = "Toyota";
-const carType : CarType = "Corno";
-const carYear : CarYear = 2003;
-const carObject : Car = {
+const carName: CarName = "Toyota";
+const carType: CarType = "Corno";
+const carYear: CarYear = 2003;
+const carObject: Car = {
     name: carName,
     type: carType,
     year: carYear
@@ -133,7 +133,7 @@ interface Rectangle {
     height: number
 }
 
-const rectangle : Rectangle = {
+const rectangle: Rectangle = {
     width: 120,
     height: 60
 }
@@ -143,7 +143,7 @@ interface ColoredRectangle extends Rectangle {
     color: string
 }
 
-const coloredRectangle : ColoredRectangle = {
+const coloredRectangle: ColoredRectangle = {
     width: 120,
     height: 60,
     color: 'white'
@@ -160,3 +160,13 @@ const showError = (errorCode: string | number) => {
 
 showError('404');
 showError(404);
+
+// ====================
+// TypeScript Functions
+// ====================
+
+// return type explicitly defined
+
+function getSum({ x, y }: { x: number, y: number }):number {
+    return x + y
+}
